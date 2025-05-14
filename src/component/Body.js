@@ -1,11 +1,27 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Login } from "./Login"
+import Browse from "./Browse"
+
+
 const Body = () => {
   return (
     <div>
-    <h1 className="text-lg text-red-500">
-      Hello Tailwind!
-    </h1>
+    <RouterProvider router={approuter}/>
     </div>
   )
 }
+
+
+const approuter=createBrowserRouter([
+    {
+    path:"/",
+    element: <Login/>
+    },
+    {
+    path:"/browse",
+    element: <Browse/>
+    },
+
+])
 
 export default Body
