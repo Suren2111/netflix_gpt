@@ -17,8 +17,9 @@ const Body = () => {
     //console.log(user);
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/auth.user
-    const {uid,email,displayName} = user.uid;
-    dispatch(addUser({uid:uid,email:email,displayName:displayName}));
+    //console.log(user)
+    const {uid,email} = user;
+    dispatch(addUser({uid:uid,email:email}));
     // ...
   } else {
     // User is signed out
